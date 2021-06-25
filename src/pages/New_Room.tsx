@@ -12,7 +12,7 @@ import firebase from "firebase";
 
 export function NewRoom() {
   const { user } = useAuth();
-  const history = useHistory()
+  const history = useHistory();
   const [newRoom, setNewRoom] = useState("");
 
   async function handlecreateRoom(event: FormEvent) {
@@ -28,7 +28,7 @@ export function NewRoom() {
       title: newRoom,
       authorId: user?.id,
     });
-    history.push(`/rooms/${fireabaseRoom.key}`)
+    history.push(`/rooms/${fireabaseRoom.key}`);
   }
 
   return (

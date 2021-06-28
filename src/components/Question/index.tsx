@@ -33,9 +33,11 @@ export function Question({
             <img src={author.avatar} alt={author.name} />
             <span>{author.name}</span>
           </div>
+
           <div>
             {children}
           </div>
+          
         </footer>
       </div>
     );

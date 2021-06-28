@@ -21,6 +21,8 @@ export const AuthContext = createContext({} as AuthContextType);
 export const AuthContextProvider = (props: AuthContextProviderProps) => {
   const [user, setUser] = useState<User>();
 
+  //Keep the user information in the application
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
@@ -43,6 +45,7 @@ export const AuthContextProvider = (props: AuthContextProviderProps) => {
     };
   }, []);
 
+      //Login with Google
   async function signInWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
 
